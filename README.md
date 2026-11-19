@@ -26,7 +26,8 @@ is the copy the paper was written from, for comparison.
   separately, so only its final answers are kept).
 - `data/compliance_v2.jsonl.gz` — all 12,000 generations: code, compiler verdict, rules,
   diagnostic classes and the compiler output of failed builds (last 60,000 characters;
-  builds ran at the error log level, so successful builds store no output).
+  builds ran at the error log level, so 1,177 of the 1,182 successful builds store no
+  output and the other five only a bundler notice).
 - `harness/ArkProject/` — the minimal HarmonyOS project every page was compiled in.
 
 ## Rerun the experiment
