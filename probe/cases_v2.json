@@ -1,0 +1,837 @@
+[
+  {
+    "name": "untyped_obj_literal",
+    "snippet": "const p = { name: 'a', age: 3 };",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-untyped-obj-literals"
+    ],
+    "usable": true,
+    "target": "arkts-no-untyped-obj-literals",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "obj_literal_as_type",
+    "snippet": "let cfg: { w: number } = { w: 1 };",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-obj-literals-as-types",
+      "arkts-no-untyped-obj-literals"
+    ],
+    "usable": true,
+    "target": "arkts-no-obj-literals-as-types",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "any_type",
+    "snippet": "let x: any = 5;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-any-unknown"
+    ],
+    "usable": true,
+    "target": "arkts-no-any-unknown",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "unknown_type",
+    "snippet": "let u: unknown = 5;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-any-unknown"
+    ],
+    "usable": true,
+    "target": "arkts-no-any-unknown",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "typed_catch",
+    "snippet": "try { this.work(); } catch (e: Error) { }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-types-in-catch"
+    ],
+    "usable": true,
+    "target": "arkts-no-types-in-catch",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "destructuring_decl",
+    "snippet": "const [a, b] = [1, 2];",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-destruct-decls"
+    ],
+    "usable": true,
+    "target": "arkts-no-destruct-decls",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "obj_destructuring",
+    "snippet": "const o: Point = new Point(); const { x } = o;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-destruct-decls"
+    ],
+    "usable": true,
+    "target": "arkts-no-destruct-decls",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "empty_array_inferred",
+    "snippet": "let bag = []; bag.push(1);",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [],
+    "usable": false,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "mixed_array_literal",
+    "snippet": "const mixed = [1, 'two', true];",
+    "expected": "forbidden",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "require_call",
+    "snippet": "const m = require('mod');",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-any-unknown"
+    ],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "ctor_prop_decl",
+    "snippet": "class Holder { constructor(private v: number) {} }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-ctor-prop-decls"
+    ],
+    "usable": true,
+    "target": "arkts-no-ctor-prop-decls",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "object_spread",
+    "snippet": "const a: Point = new Point(); const b = { ...a };",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-any-unknown",
+      "arkts-no-spread",
+      "arkts-no-untyped-obj-literals"
+    ],
+    "usable": true,
+    "target": "arkts-no-spread",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "func_bind",
+    "snippet": "class B { go(): void {} } const b = new B(); const f = b.go.bind(b);",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-any-unknown",
+      "arkts-no-func-bind"
+    ],
+    "usable": true,
+    "target": "arkts-no-func-bind",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "func_apply",
+    "snippet": "class C { go(): void {} } const c = new C(); c.go.apply(c, []);",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-func-apply-call"
+    ],
+    "usable": true,
+    "target": "arkts-no-func-apply-call",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "in_operator",
+    "snippet": "const o: Record<string, number> = {}; const has = 'k' in o;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-in"
+    ],
+    "usable": true,
+    "target": "arkts-no-in",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "with_statement",
+    "snippet": "with (Math) { const r = PI; }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-any-unknown",
+      "arkts-no-with"
+    ],
+    "usable": true,
+    "target": "arkts-no-with",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "standalone_this",
+    "snippet": "function loose(): void { const t = this; }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-any-unknown",
+      "arkts-no-standalone-this"
+    ],
+    "usable": true,
+    "target": "arkts-no-standalone-this",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "globalthis_use",
+    "snippet": "const g = globalThis;",
+    "expected": "forbidden",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "comma_outside_loop",
+    "snippet": "let z: number = 0; z = (1, 2);",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-comma-outside-loops"
+    ],
+    "usable": true,
+    "target": "arkts-no-comma-outside-loops",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "props_by_index",
+    "snippet": "class K { a: number = 1; } const k = new K(); const v = k['a'];",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-props-by-index"
+    ],
+    "usable": true,
+    "target": "arkts-no-props-by-index",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "class_as_obj",
+    "snippet": "class D { static s: number = 1; } const ref = D;",
+    "expected": "forbidden",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "namespace_as_obj",
+    "snippet": "namespace NS { export const v: number = 1; } const n = NS;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-ns-as-obj"
+    ],
+    "usable": true,
+    "target": "arkts-no-ns-as-obj",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "implicit_return_type",
+    "snippet": "function pick(flag: boolean) { return flag ? 1 : 'x'; }",
+    "expected": "forbidden",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "inferred_generic",
+    "snippet": "class Box<T> { v?: T } const bx = new Box();",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-any-unknown",
+      "arkts-no-inferred-generic-params"
+    ],
+    "usable": true,
+    "target": "arkts-no-inferred-generic-params",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "as_cast_unrelated",
+    "snippet": "const s: string = 'a'; const n2 = s as unknown as number;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-any-unknown"
+    ],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "polymorphic_unop",
+    "snippet": "const s3: string = '5'; const neg = -s3;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-polymorphic-unops"
+    ],
+    "usable": true,
+    "target": "arkts-no-polymorphic-unops",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "delete_operator",
+    "snippet": "class E { a?: number } const e = new E(); delete e.a;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-delete"
+    ],
+    "usable": true,
+    "target": "arkts-no-delete",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "typeof_as_type",
+    "snippet": "const base: number = 1; let same: typeof base = 2;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-type-query"
+    ],
+    "usable": true,
+    "target": "arkts-no-type-query",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "index_signature",
+    "snippet": "interface Bag { [key: string]: number }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-indexed-signatures"
+    ],
+    "usable": true,
+    "target": "arkts-no-indexed-signatures",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "function_expression",
+    "snippet": "const fe = function (x: number): number { return x; };",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-func-expressions"
+    ],
+    "usable": true,
+    "target": "arkts-no-func-expressions",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "generic_arrow_untyped",
+    "snippet": "const id = (v) => v;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-any-unknown",
+      "arkts-no-implicit-return-types"
+    ],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "enum_string_mixed",
+    "snippet": "enum M { A = 1, B = 'b' }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-enum-mixed-types"
+    ],
+    "usable": true,
+    "target": "arkts-no-enum-mixed-types",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "decl_merging",
+    "snippet": "interface Dup { a: number } interface Dup { b: number }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-decl-merging"
+    ],
+    "usable": true,
+    "target": "arkts-no-decl-merging",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "var_declaration",
+    "snippet": "var legacy: number = 1;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-var"
+    ],
+    "usable": true,
+    "target": "arkts-no-var",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "structural_typing",
+    "snippet": "class P1 { x: number = 0 } class P2 { x: number = 0 } const conv: P1 = new P2();",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-structural-typing"
+    ],
+    "usable": true,
+    "target": "arkts-no-structural-typing",
+    "target_confirmed": true,
+    "protocol": "v1"
+  },
+  {
+    "name": "arrow_function",
+    "snippet": "const f: (x: number) => number = (x: number): number => x * 2;",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "async_await",
+    "snippet": "async function g(): Promise<void> { await Promise.resolve(); }",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "template_literal",
+    "snippet": "const n: string = 'x'; const s: string = `hi ${n}`;",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "typed_obj_literal",
+    "snippet": "interface P { name: string } const p: P = { name: 'a' };",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "for_of_loop",
+    "snippet": "const xs: number[] = [1, 2]; let t: number = 0; for (const x of xs) { t += x; }",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "explicit_class",
+    "snippet": "class Point { x: number = 0; y: number = 0; }",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "typed_array_literal",
+    "snippet": "const nums: number[] = [1, 2, 3];",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "interface_impl",
+    "snippet": "interface ZzShape { zarea(): number } class ZzSq implements ZzShape { zarea(): number { return 1; } }",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "generic_explicit",
+    "snippet": "class Box2<T> { v?: T } const b2 = new Box2<number>();",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "optional_chaining",
+    "snippet": "class N { next?: N } const nn = new N(); const q = nn.next?.next;",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "string_methods",
+    "snippet": "const s2: string = 'abc'; const up: string = s2.toUpperCase();",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "ternary_typed",
+    "snippet": "const flag: boolean = true; const r: number = flag ? 1 : 2;",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "map_usage",
+    "snippet": "const m2: Map<string, number> = new Map<string, number>(); m2.set('a', 1);",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "union_type",
+    "snippet": "let u2: number | string = 1; u2 = 'a';",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "readonly_field",
+    "snippet": "class R { readonly id: number = 1; }",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v1"
+  },
+  {
+    "name": "angle_bracket_cast",
+    "snippet": "const v1: Object = 1; const w1 = <number>v1;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-as-casts"
+    ],
+    "usable": true,
+    "target": "arkts-as-casts",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "angle_bracket_cast2",
+    "snippet": "class Q1 { a: number = 1 } const o1: Object = new Q1(); const q1 = <Q1>o1;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-as-casts"
+    ],
+    "usable": true,
+    "target": "arkts-as-casts",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "jsx_markup",
+    "snippet": "const view = <Column><Text>hi</Text></Column>;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-as-casts"
+    ],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v2"
+  },
+  {
+    "name": "recursive_no_return",
+    "snippet": "function fact(n: number) { return n <= 1 ? 1 : n * fact(n - 1); }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-implicit-return-types"
+    ],
+    "usable": true,
+    "target": "arkts-no-implicit-return-types",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "recursive_method_no_return",
+    "snippet": "class T2 { f(n: number) { return n > 0 ? this.f(n - 1) : 0; } }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-implicit-return-types"
+    ],
+    "usable": true,
+    "target": "arkts-no-implicit-return-types",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "array_of_untyped_objects",
+    "snippet": "interface I1 { a: number } const arr2 = [{ a: 1 }, { a: 2 }];",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-noninferrable-arr-literals",
+      "arkts-no-untyped-obj-literals"
+    ],
+    "usable": true,
+    "target": "arkts-no-noninferrable-arr-literals",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "array_of_untyped_objects2",
+    "snippet": "const rows = [{ id: 1, label: 'a' }];",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-noninferrable-arr-literals",
+      "arkts-no-untyped-obj-literals"
+    ],
+    "usable": true,
+    "target": "arkts-no-noninferrable-arr-literals",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "var_in_for_loop",
+    "snippet": "for (var i = 0; i < 3; i++) { }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-var"
+    ],
+    "usable": true,
+    "target": "arkts-no-var",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "in_operator_class",
+    "snippet": "class H { a: number = 1 } const h = new H(); const hasA = 'a' in h;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-in"
+    ],
+    "usable": true,
+    "target": "arkts-no-in",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "comma_statement",
+    "snippet": "let p3: number = 0; let q3: number = 0; p3 = 1, q3 = 2;",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-comma-outside-loops"
+    ],
+    "usable": true,
+    "target": "arkts-no-comma-outside-loops",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "untyped_obj_in_function",
+    "snippet": "function mk(): void { const cfg = { debug: true }; }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-untyped-obj-literals"
+    ],
+    "usable": true,
+    "target": "arkts-no-untyped-obj-literals",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "obj_type_parameter",
+    "snippet": "function area(r: { w: number, h: number }): number { return r.w * r.h; }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-obj-literals-as-types"
+    ],
+    "usable": true,
+    "target": "arkts-no-obj-literals-as-types",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "any_parameter",
+    "snippet": "function logv(v: any): void { }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-any-unknown"
+    ],
+    "usable": true,
+    "target": "arkts-no-any-unknown",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "this_in_function",
+    "snippet": "function helper(): number { return this.count; }",
+    "expected": "forbidden",
+    "compiler_verdict": "forbidden",
+    "rules": [
+      "arkts-no-standalone-this"
+    ],
+    "usable": true,
+    "target": "arkts-no-standalone-this",
+    "target_confirmed": true,
+    "protocol": "v2"
+  },
+  {
+    "name": "as_cast_supported",
+    "snippet": "class A1 { a: number = 1 } class B1 extends A1 { } const a1: A1 = new B1(); const b1 = a1 as B1;",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v2"
+  },
+  {
+    "name": "simple_no_return",
+    "snippet": "function two() { return 2; }",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v2"
+  },
+  {
+    "name": "empty_array_const",
+    "snippet": "const empty = [];",
+    "expected": "allowed",
+    "compiler_verdict": "allowed",
+    "rules": [],
+    "usable": true,
+    "target": null,
+    "target_confirmed": null,
+    "protocol": "v2"
+  }
+]

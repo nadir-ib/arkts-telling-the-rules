@@ -1,0 +1,101 @@
+prompt
+Configure functionality for new List item insertion at specific indices when buttons are activated in ArkTS.
+Configure application theme presets with user customization options in ArkTS.
+Build a custom component that reacts to state modifications and updates the UI in ArkTS.
+Build tabbed views with three tabs containing different content in ArkTS applications.
+Develop grid views in ArkTS applications for image collection displays that implement detailed views for selected image displays when tapped using ArkUI.
+Develop grid views of category images in ArkTS applications that implement tap functionality for category name displays.
+Configure interval calculation functionality in ArkTS.
+"Develop an ArkTS application featuring drawer menus with Home, Settings, and About options that implement different content displays when selected using ArkUI."
+Configure ComposeTitleBar without subtitle inclusion in ArkTS.
+Develop an ArkTS application featuring titled image grids that implement dialog boxes for image title displays when tapped using ArkUI.
+Develop custom drawers in ArkTS applications containing multiple items that navigate to different screens when selected using ArkUI.
+Configure ListItem components with dynamic index spans in ArkTS.
+"Build an ArkTS application featuring forms with name, email, and password text fields that implement alert dialogs for entered value displays upon submission using ArkUI."
+Design FlowListStruct optimization featuring minimized external properties in ArkTS.
+"Develop an ArkTS application featuring a three-tab bottom navigation with Home, Profile, and Settings screens containing placeholder content using ArkUI."
+Develop grid views of images that expand for detail displays when tapped in ArkTS applications using ArkUI.
+Build a list selection system with item detail presentation functionality in an ArkTS application.
+"Develop a list item presentation with images and text using ArkUI, and create an item tap dialog featuring detailed information in ArkTS."
+"Develop a grid view of images in ArkUI that enlarges when activated, using ArkTS."
+"Develop an ArkTS application featuring a navigation drawer with Home, Settings, and About options that route to corresponding information pages using ArkUI."
+Develop a grid layout in an ArkTS application featuring various fruits that implement tap event handlers for selected fruit message displays using ArkUI.
+Configure security components with specified icon sizes in ArkTS.
+"Build a bottom navigation featuring three tabs for home, settings, and profile screens in an ArkTS application using ArkUI."
+"Develop an ArkTS application featuring bottom navigation with Home, Profile, and Settings icons that navigate to different screens using ArkUI."
+Build food selection applications in ArkTS featuring food option lists that enable item selection and selected food message displays.
+Design a callback function for the onTerminated event in FullScreenLaunchComponent using ArkTS.
+Build an ArkTS application featuring UI with text fields and dropdown menus that implement functionality for message displays containing user input text and selected dropdown items using ArkUI.
+Build a multi-tab application in ArkTS featuring unique content per tab and navigation bar for tab switching using ArkUI.
+Develop list-featured ArkTS applications with item detail dialogs using ArkUI.
+"Develop a login form application in ArkTS featuring username, password, and email fields with input validation and alert displays upon successful submission."
+Develop an ArkTS application featuring custom navigation drawers with three items that implement navigation to different pages when activated using ArkUI.
+Develop grid layouts in ArkUI featuring titled images that implement image viewer dialogs for full image displays when tapped using ArkTS.
+Configure conflict resolution mechanisms between SubHeader and ComposeTitleBar components in ArkTS.
+Build login forms in ArkTS applications with username and password text fields that implement validation for error message displays when buttons are activated and fields are empty using ArkUI.
+"Build tab-based ArkTS applications with separate Home, Settings, and Profile tabs that present different content using ArkUI."
+Develop an ArkTS application featuring bottom navigation with three tabs that navigate to different pages when tapped using ArkUI.
+"Develop a bottom navigation featuring Home, Profile, and Settings tabs in an ArkTS application that implement different color screens using ArkUI."
+Build multi-selection ListView components in ArkUI that implement summary features for selected item displays in ArkTS applications.
+Build a Bottom Navigation Bar featuring three tabs in an ArkTS application that presents different text content when tabs are activated.
+Create node tree operations with RenderNode in ArkTS.
+Create playback progress change listeners in ArkTS.
+Develop a grid view of images in an ArkTS application that routes to full-image views when tapped using ArkUI.
+"Develop a movie list application using ArkTS and ArkUI featuring movie titles, posters, and ratings that implement dialog boxes for detailed movie information upon selection."
+Develop a grid view of images featuring titles in an ArkTS application that implement image tap functionality for selected image title dialogs using ArkUI.
+Configure gesture group error handling in ArkTS.
+Configure CRUD operations in mock database setups using ArkTS.
+"Create an ArkTS app with a Stepper component that integrates A/B testing functionality using DatePicker and TimePicker components, all. The UI should include navigation controls and display test variations based on selected dates/times."
+"Generate an ArkTS app with a responsive Chart component that adapts to different screen sizes, using Button and Divider components for layout control, all. The app should compile and run error-free with proper ArkUI component usage."
+Build an ArkTS application featuring text fields for user age input with buttons that trigger age group checking and message displays based on user age groups using ArkUI.
+Explore and implement various color modes in ArkTS.
+Develop grid layouts featuring captioned images using ArkUI that implement full-screen image viewers when tapped using ArkTS.
+Create an ArkUI layout for photo gallery with Rating and transition effects using LongPressGesture and Toggle components in an ArkTS app.
+Develop task management applications in ArkTS enabling users to input tasks with deadlines and completion marking.
+"Build an ArkTS application featuring custom ArkUI designs for weather forecast displays including temperature, weather conditions, and city names."
+Develop an ArkTS application featuring text fields for user input with buttons that present personalized greeting messages.
+"Configure bottom navigation bars featuring Home, Profile, and Settings tabs that present different content screens in ArkTS applications using ArkUI."
+Build a click handler that measures component dimensions in ArkTS.
+Build an ArkTS application featuring bottom navigation that enables switching between multiple pages with text and image displays using ArkUI.
+"Produce an ArkTS app for a social media UI with Dialog, audio playback simulation using Slider, and audio recording simulation, featuring List for posts and Button components for interactions."
+Build ScrollBar components with custom appearance in ArkTS.
+Configure List components with grey backgroundColor properties in ArkTS.
+Configure navigation drawers with three items in ArkTS applications that route to different screens when items are activated.
+Develop movie list applications using ArkTS and ArkUI featuring movie posters and titles that implement detailed views for additional movie information when tapped.
+Configure particle color transitions in ArkTS.
+Configure image grids in ArkTS where each image represents different categories with message displays when tapped.
+Configure swipe gesture cancellation in ArkTS.
+Configure shopping cart features in ArkTS applications enabling item addition when buttons are activated.
+Create change detection mechanisms for Checkbox Group selections in ArkTS.
+Build an ArkTS application featuring custom animated splash screens that transition to main screens after specified durations using ArkUI.
+"Build an ArkTS application featuring bottom navigation with Home, Profile, and Settings tabs that present simple text widgets with tab names using ArkUI."
+Build login interfaces in ArkTS applications with email and password text fields that implement validation on login button activation for success message displays with correct credentials using ArkUI.
+Develop grid layouts in ArkUI featuring images with accompanying text that implement image tap functionality for corresponding text message displays using ArkTS.
+Develop an ArkTS application featuring a dropdown menu that presents different colors when color options are selected using ArkUI.
+Configure alignment consistency within differing List sections in ArkTS.
+"Develop music album list applications using ArkTS and ArkUI featuring album images, titles, and artists that navigate to detailed album views when selected."
+Create functionality to refresh accessed history when requested by web pages in ArkTS.
+"Develop an ArkTS application featuring bottom navigation with Home, Profile, and Settings tabs that implement corresponding pages with relevant content and styling using ArkUI."
+Build an ArkTS application featuring bottom navigation with three tabs that present different pages containing images and text using ArkUI.
+Implement a List in ArkTS that supports performance monitoring using SwipeGesture and Breadcrumb components in an ArkTS app.
+Develop an ArkTS application featuring grid layouts with titled images that implement image enlargement when tapped using ArkUI.
+"Develop an ArkTS application featuring a form with name, email, and password fields that validates input and presents success messages upon correct completion."
+Configure secure TextInput components that restrict character copying in ArkTS.
+Develop grid view layouts featuring images and captions in ArkUI that implement image enlargement when tapped using ArkTS.
+"Implement an ArkTS app with a counter UI using Marquee and Pagination components, designed for language learning with increment/decrement buttons and animated text display."
+Develop grid views in ArkTS applications featuring titled images that implement dialog boxes for full-size image displays with additional details when activated using ArkUI.
+Develop an ArkTS application featuring a rotating image carousel that presents detailed image views when tapped.
+Configure the advantages of layout modifiers over direct styling attributes in ArkTS applications.
+Build small-sized control button components in ArkTS.
+Configure data reload mechanisms in ArkTS.
+"Build bottom navigation bars with Home, Profile, and Settings tabs in ArkTS applications that present different screens."
+"Develop navigation drawers with three options in ArkTS applications that implement separate pages for Home, About, and Contact using ArkUI."
+Configure efficient array management mechanisms during refresh operations in ArkTS.
+Configure progress indicators in ArkTS applications for loading state displays during API data fetching using ArkUI.
+Configure half-folded state handling in ArkTS.
+Design value assignment to icon in OperateIcon class for ArkTS.
+Build an ArkTS application featuring login interfaces with username and password text fields that present messages with entered credentials when login buttons are activated using ArkUI.
+Configure drag animation integration options using ArkTS.
+Implement a Card in ArkTS that implements data encryption using Badge and Tabs components in an ArkTS app.
+Configure custom pop-up dialogs featuring TextInput components through @CustomDialog decorators in ArkTS.
+"Build a bottom navigation featuring three tabs in an ArkTS application that navigate to separate pages titled Home, Profile, and Settings using ArkUI."

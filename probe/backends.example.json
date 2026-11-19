@@ -1,0 +1,11 @@
+{
+  "local": {
+    "kind": "ollama",
+    "url": "http://127.0.0.1:11434"
+  },
+  "bigbox": {
+    "kind": "openai",
+    "url": "http://<host>:8080",
+    "api_key_env": "LLAMACPP_API_KEY"
+  }
+}
